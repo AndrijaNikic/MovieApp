@@ -1,0 +1,107 @@
+{
+  "id": "9f06baa3-2b8d-4f13-aecb-015e9f1f8b17",
+  "version": "2.0",
+  "name": "MovieApp",
+  "url": "https://localhost:44346/",
+  "tests": [{
+    "id": "5c01972b-c5c9-41af-b9fb-a9bf871a3692",
+    "name": "Log in",
+    "commands": [{
+      "id": "ffe9110d-ccf4-4eb8-86d1-977b11dbcbcc",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44346/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b88ca25-e625-4fcb-afe2-3c0983becd93",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1044x1123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df465cbd-89d2-4d9d-8053-f0254672b328",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Log in", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Log in')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/Account/Login')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aaf4f148-cb8b-4603-8281-8450da6178c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4)",
+      "targets": [
+        ["css=.form-group:nth-child(4)", "css:finder"],
+        ["xpath=//section[@id='loginForm']/form/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebceb579-1f90-42f7-9719-7d870f59cf0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Log in']", "xpath:attributes"],
+        ["xpath=//section[@id='loginForm']/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "65c0b1b6-f9d1-47aa-9812-0f510a5206aa",
+    "name": "Log off",
+    "commands": [{
+      "id": "2fd5ec0a-9a6f-4f46-a2d9-18f3791cb436",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44346/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0cdfdc1-07f6-45c4-91d5-05eeae72dbc2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1044x1123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83554cdf-841d-4955-bd92-d3a2a7559cc8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log off",
+      "targets": [
+        ["linkText=Log off", "linkText"],
+        ["css=.navbar-right > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Log off')]", "xpath:link"],
+        ["xpath=//form[@id='logoutForm']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:document.getElementById('logoutForm').submit()\")]", "xpath:href"],
+        ["xpath=//form/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log off')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "74ffe031-ce0e-42e0-afd2-a930bd26b8a2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44346/"],
+  "plugins": []
+}

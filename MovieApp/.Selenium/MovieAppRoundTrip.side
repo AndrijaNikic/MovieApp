@@ -1,0 +1,296 @@
+{
+  "id": "d9dfbde6-2a8c-4abc-a1d0-d87baaaeebda",
+  "version": "2.0",
+  "name": "MovieApp",
+  "url": "https://localhost:44346",
+  "tests": [{
+    "id": "531f3cbc-aae6-4829-8604-15ffff0354bd",
+    "name": "Edit Customer",
+    "commands": [{
+      "id": "1da06b35-b4f2-4446-ab20-7d544c986983",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "966a8732-0cb5-4a13-8afc-01731f68bd8e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1044x1123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c4347bc-e4be-40ec-b00f-0628c76f9c63",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Customers",
+      "targets": [
+        ["linkText=Customers", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Customers')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Customers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0395b344-5233-4bb4-ad5c-e3712794c781",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Doug Dimmadome",
+      "targets": [
+        ["linkText=Doug Dimmadome", "linkText"],
+        ["css=.even:nth-child(2) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Doug Dimmadome')]", "xpath:link"],
+        ["xpath=//table[@id='customers']/tbody/tr[2]/td/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/customers/edit/9')]", "xpath:href"],
+        ["xpath=//tr[2]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Doug Dimmadome')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "349043ff-87f5-48b6-a5d7-44a4c332deab",
+      "comment": "",
+      "command": "click",
+      "target": "id=Customer_MembershipTypeId",
+      "targets": [
+        ["id=Customer_MembershipTypeId", "id"],
+        ["name=Customer.MembershipTypeId", "name"],
+        ["css=#Customer_MembershipTypeId", "css:finder"],
+        ["xpath=//select[@id='Customer_MembershipTypeId']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'Select Membership Type\nPay as You go\nMonthly\nQuarterly\nYearly')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93a0a7c9-8e11-477f-9496-8025ffc03904",
+      "comment": "",
+      "command": "select",
+      "target": "id=Customer_MembershipTypeId",
+      "targets": [],
+      "value": "label=Yearly"
+    }, {
+      "id": "4fccee97-dc27-4533-a3e9-ba690bd3cf39",
+      "comment": "",
+      "command": "click",
+      "target": "id=Customer_MembershipTypeId",
+      "targets": [
+        ["id=Customer_MembershipTypeId", "id"],
+        ["name=Customer.MembershipTypeId", "name"],
+        ["css=#Customer_MembershipTypeId", "css:finder"],
+        ["xpath=//select[@id='Customer_MembershipTypeId']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'Select Membership Type\nPay as You go\nMonthly\nQuarterly\nYearly')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "436375cd-92ea-4290-a12d-79947fa0661b",
+      "comment": "",
+      "command": "click",
+      "target": "id=Customer_Birthdate",
+      "targets": [
+        ["id=Customer_Birthdate", "id"],
+        ["name=Customer.Birthdate", "name"],
+        ["css=#Customer_Birthdate", "css:finder"],
+        ["xpath=//input[@id='Customer_Birthdate']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bad01d1-edc1-459d-b105-802af678f4ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=Customer_Birthdate",
+      "targets": [
+        ["id=Customer_Birthdate", "id"],
+        ["name=Customer.Birthdate", "name"],
+        ["css=#Customer_Birthdate", "css:finder"],
+        ["xpath=//input[@id='Customer_Birthdate']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "5 Jan 1967"
+    }, {
+      "id": "f286fe07-df82-4d74-bede-9c70ccc097da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e6c98c8c-336b-4bd8-b1eb-f231f512b58e",
+    "name": "Round trip",
+    "commands": [{
+      "id": "6fe8bfc4-df58-4cd3-825f-465a17317171",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ab20e78-8a81-4165-a7cf-8a9f26ecca33",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1044x1123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50dae669-a119-4a43-b99a-14a95e460ec5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=New Rental",
+      "targets": [
+        ["linkText=New Rental", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'New Rental')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Rentals')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'New Rental')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d7a750b-d1ec-4e83-b5aa-bce2a1a6a59c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Customers",
+      "targets": [
+        ["linkText=Customers", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Customers')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Customers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45dc78a2-12c4-4256-ba70-be1b315d15d6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Movies",
+      "targets": [
+        ["linkText=Movies", "linkText"],
+        ["css=.nav > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Movies')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Movies')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Movies')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58f33246-44c9-4138-bb46-694a4c6912ee",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Hello admin@movieapp.com!",
+      "targets": [
+        ["linkText=Hello admin@movieapp.com!", "linkText"],
+        ["css=.navbar-right > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Hello admin@movieapp.com!')]", "xpath:link"],
+        ["xpath=//form[@id='logoutForm']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Manage')]", "xpath:href"],
+        ["xpath=//form/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Hello admin@movieapp.com!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30870f07-878e-4542-bb96-007893470719",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log off",
+      "targets": [
+        ["linkText=Log off", "linkText"],
+        ["css=.navbar-right > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Log off')]", "xpath:link"],
+        ["xpath=//form[@id='logoutForm']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:document.getElementById('logoutForm').submit()\")]", "xpath:href"],
+        ["xpath=//form/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log off')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cd8e7a9-04d0-4d98-94cd-e496e4d8ffca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=MovieApp",
+      "targets": [
+        ["linkText=MovieApp", "linkText"],
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'MovieApp')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'MovieApp')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a92b2ab-e957-4029-a242-ac22467e85fa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=New Rental",
+      "targets": [
+        ["linkText=New Rental", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'New Rental')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Rentals')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'New Rental')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d27a9e2d-7cd9-4375-aaca-ad98a3149591",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Customers",
+      "targets": [
+        ["linkText=Customers", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Customers')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Customers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33064f10-4892-4a6e-9236-f10fd7da4e74",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Movies",
+      "targets": [
+        ["linkText=Movies", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Movies')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Movies')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Movies')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c55b8f29-8348-44e8-a1f8-c457984f87ff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=MovieApp",
+      "targets": [
+        ["linkText=MovieApp", "linkText"],
+        ["css=.navbar-brand", "css:finder"],
+        ["xpath=//a[contains(text(),'MovieApp')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'MovieApp')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "79c3c5a0-b3ee-4a2c-90c0-1f2de562715c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44346/"],
+  "plugins": []
+}

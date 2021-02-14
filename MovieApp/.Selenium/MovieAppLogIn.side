@@ -1,0 +1,74 @@
+{
+  "id": "9f06baa3-2b8d-4f13-aecb-015e9f1f8b17",
+  "version": "2.0",
+  "name": "MovieApp",
+  "url": "https://localhost:44346/",
+  "tests": [{
+    "id": "5c01972b-c5c9-41af-b9fb-a9bf871a3692",
+    "name": "Log in",
+    "commands": [{
+      "id": "ffe9110d-ccf4-4eb8-86d1-977b11dbcbcc",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44346/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b88ca25-e625-4fcb-afe2-3c0983becd93",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1044x1123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df465cbd-89d2-4d9d-8053-f0254672b328",
+      "comment": "",
+      "command": "click",
+      "target": "id=loginLink",
+      "targets": [
+        ["id=loginLink", "id"],
+        ["linkText=Log in", "linkText"],
+        ["css=#loginLink", "css:finder"],
+        ["xpath=//a[contains(text(),'Log in')]", "xpath:link"],
+        ["xpath=//a[@id='loginLink']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/Account/Login')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aaf4f148-cb8b-4603-8281-8450da6178c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-group:nth-child(4)",
+      "targets": [
+        ["css=.form-group:nth-child(4)", "css:finder"],
+        ["xpath=//section[@id='loginForm']/form/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebceb579-1f90-42f7-9719-7d870f59cf0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Log in']", "xpath:attributes"],
+        ["xpath=//section[@id='loginForm']/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "74ffe031-ce0e-42e0-afd2-a930bd26b8a2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44346/"],
+  "plugins": []
+}

@@ -1,0 +1,1950 @@
+{
+	"info": {
+		"_postman_id": "1e1858ae-3ba8-46a6-b04d-9136344a75a8",
+		"name": "MovieApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer(s)",
+			"item": [
+				{
+					"name": "GET Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44346/api/customers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "A request to get a list of all customers."
+					},
+					"response": [
+						{
+							"name": "GET Customers - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/customers",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVycw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:25:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1214"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"John Smith\",\n        \"isSubscribedToNewsLetter\": false,\n        \"membershipTypeId\": 1,\n        \"membershipType\": {\n            \"id\": 1,\n            \"name\": \"Pay as You go\"\n        },\n        \"birthdate\": \"1958-01-01T00:00:00\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Mumbasa Roggers\",\n        \"isSubscribedToNewsLetter\": true,\n        \"membershipTypeId\": 3,\n        \"membershipType\": {\n            \"id\": 3,\n            \"name\": \"Quarterly\"\n        },\n        \"birthdate\": \"1990-07-06T00:00:00\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Anthony Wilkinson\",\n        \"isSubscribedToNewsLetter\": false,\n        \"membershipTypeId\": 2,\n        \"membershipType\": {\n            \"id\": 2,\n            \"name\": \"Monthly\"\n        },\n        \"birthdate\": \"2000-10-08T00:00:00\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Miriam Doubledoo\",\n        \"isSubscribedToNewsLetter\": false,\n        \"membershipTypeId\": 1,\n        \"membershipType\": {\n            \"id\": 1,\n            \"name\": \"Pay as You go\"\n        },\n        \"birthdate\": \"1994-11-11T00:00:00\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Jonathan Smith\",\n        \"isSubscribedToNewsLetter\": false,\n        \"membershipTypeId\": 1,\n        \"membershipType\": {\n            \"id\": 1,\n            \"name\": \"Pay as You go\"\n        },\n        \"birthdate\": \"1958-01-01T00:00:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44346/api/customers/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET Customer fail - 404 - Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/customers/111",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers",
+										"111"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVyc1wxMTE=?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:29:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "GET Customer success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/customers/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVyc1wx?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:28:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"John Smith\",\n    \"isSubscribedToNewsLetter\": false,\n    \"membershipTypeId\": 1,\n    \"membershipType\": null,\n    \"birthdate\": \"1958-01-01T00:00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "POST Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Doug Dimmadome\",\r\n        \"isSubscribedToNewsLetter\": true,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 3,\r\n        \"birthdate\": \"1999-01-05T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44346/api/customers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST Customer - fail - 400 - Bad request (Name field required)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"\",\r\n        \"isSubscribedToNewsLetter\": true,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 3,\r\n        \"birthdate\": \"1999-01-05T00:00:00\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/customers",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVycw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:34:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "POST Customer - fail - 400 - Bad request (Invalid date)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Doug Dimmadome\",\r\n        \"isSubscribedToNewsLetter\": true,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 3,\r\n        \"birthdate\": \"1999-22-22T00:00:00\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/customers",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVycw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:36:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "POST Customer - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Doug Dimmadome\",\r\n        \"isSubscribedToNewsLetter\": true,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 3,\r\n        \"birthdate\": \"1999-01-05T00:00:00\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/customers",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:44346/api/customers/9"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVycw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:33:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"name\": \"Doug Dimmadome\",\n    \"isSubscribedToNewsLetter\": true,\n    \"membershipTypeId\": 3,\n    \"membershipType\": null,\n    \"birthdate\": \"1999-01-05T00:00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT Edit Customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Jonathan Smith\",\r\n        \"isSubscribedToNewsLetter\": false,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 4,\r\n        \"birthdate\": \"1958-01-01T00:00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44346/api/customers/8",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"customers",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT Edit Customer - fail - 400 - Bad request (Invalid date)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Jonathan Smith\",\r\n        \"isSubscribedToNewsLetter\": false,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 4,\r\n        \"birthdate\": \"1958-22-22T00:00:00\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/customers/8",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers",
+										"8"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVyc1w4?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:42:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "PUT Edit Customer - 400 - Bad request (Name required)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"\",\r\n        \"isSubscribedToNewsLetter\": false,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 4,\r\n        \"birthdate\": \"1958-01-01T00:00:00\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/customers/8",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers",
+										"8"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVyc1w4?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:43:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "PUT Edit Customer - success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Jonathan Smith\",\r\n        \"isSubscribedToNewsLetter\": false,\r\n        \"membershipType\": null,\r\n        \"membershipTypeId\": 4,\r\n        \"birthdate\": \"1958-01-01T00:00:00\"\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/customers/8",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVyc1w4?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:41:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "DELETE Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44346/api/customers/111",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"customers",
+								"111"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Customer - success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/customers/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVyc1wx?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:45:15 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "DELETE Customer - 404 - Not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/customers/111",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"customers",
+										"111"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXGN1c3RvbWVyc1wxMTE=?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:45:40 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movie(s)",
+			"item": [
+				{
+					"name": "GET Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44346/api/movies",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET Movies - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/movies",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllcw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:47:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "973"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Shrek\",\n        \"genreId\": 1,\n        \"genre\": {\n            \"id\": 1,\n            \"name\": \"Action\"\n        },\n        \"dateAdded\": \"2010-01-01T00:00:00\",\n        \"releaseDate\": \"2001-04-22T00:00:00\",\n        \"numberInStock\": 5\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Shrek II\",\n        \"genreId\": 1,\n        \"genre\": {\n            \"id\": 1,\n            \"name\": \"Action\"\n        },\n        \"dateAdded\": \"2010-01-01T00:00:00\",\n        \"releaseDate\": \"2004-05-15T00:00:00\",\n        \"numberInStock\": 3\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Knives out\",\n        \"genreId\": 1,\n        \"genre\": {\n            \"id\": 1,\n            \"name\": \"Action\"\n        },\n        \"dateAdded\": \"2021-02-09T18:04:06.417\",\n        \"releaseDate\": \"2019-09-07T00:00:00\",\n        \"numberInStock\": 15\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Wall-E\",\n        \"genreId\": 3,\n        \"genre\": {\n            \"id\": 3,\n            \"name\": \"Family\"\n        },\n        \"dateAdded\": \"2021-02-10T18:24:51.427\",\n        \"releaseDate\": \"2008-06-21T00:00:00\",\n        \"numberInStock\": 6\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET Movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44346/api/movies/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET Movie - fail - 404 - Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/movies/67",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies",
+										"67"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllc1w2Nw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:48:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "GET Movie - success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/movies/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllc1wx?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:48:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Shrek\",\n    \"genreId\": 1,\n    \"genre\": null,\n    \"dateAdded\": \"2010-01-01T00:00:00\",\n    \"releaseDate\": \"2001-04-22T00:00:00\",\n    \"numberInStock\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "POST Movie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Shrek III\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2010-01-01T00:00:00\",\r\n        \"releaseDate\": \"2007-05-06T00:00:00\",\r\n        \"numberInStock\": 15\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44346/api/movies",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST Movie - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Shrek III\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2010-01-01T00:00:00\",\r\n        \"releaseDate\": \"2007-05-06T00:00:00\",\r\n        \"numberInStock\": 15\r\n    }"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/movies",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Location",
+									"value": "https://localhost:44346/api/movies/6"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllcw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:53:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"name\": \"Shrek III\",\n    \"genreId\": 3,\n    \"genre\": null,\n    \"dateAdded\": \"2010-01-01T00:00:00\",\n    \"releaseDate\": \"2007-05-06T00:00:00\",\n    \"numberInStock\": 15\n}"
+						},
+						{
+							"name": "POST Movie - fail - 400 - Bad request (Invalid date)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Shrek III\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2010-22-22T00:00:00\",\r\n        \"releaseDate\": \"2007-05-06T00:00:00\",\r\n        \"numberInStock\": 15\r\n    }"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/movies",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllcw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:54:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "POST Movie - fail - 400 - Bad request (Name required)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2010-01-01T00:00:00\",\r\n        \"releaseDate\": \"2007-05-06T00:00:00\",\r\n        \"numberInStock\": 15\r\n    }"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/movies",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllcw==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:53:57 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "PUT Edit Movie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Wall-E\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2021-02-10T18:24:51.427\",\r\n        \"releaseDate\": \"2008-06-21T00:00:00\",\r\n        \"numberInStock\": 8\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44346/api/movies/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"movies",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT Edit Movie - fail - 400 - Bad request (Invalid date)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Wall-E\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2021-02-10T18:24:51.427\",\r\n        \"releaseDate\": \"2008-22-21T00:00:00\",\r\n        \"numberInStock\": 8\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/movies/5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies",
+										"5"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllc1w1?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:58:48 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "PUT Edit Movie - success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Wall-E\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2021-02-10T18:24:51.427\",\r\n        \"releaseDate\": \"2008-06-21T00:00:00\",\r\n        \"numberInStock\": 8\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/movies/5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllc1w1?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:57:48 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "PUT Edit Movie - fail - 400 - Bad request (Name required)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"\",\r\n        \"genreId\": 3,\r\n        \"dateAdded\": \"2021-02-10T18:24:51.427\",\r\n        \"releaseDate\": \"2008-06-21T00:00:00\",\r\n        \"numberInStock\": 8\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/movies/5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies",
+										"5"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllc1w1?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:58:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "DELETE Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44346/api/movies/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"movies",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE Movie - fail - 404 - Not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/movies/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies",
+										"10"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllc1wxMA==?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 13:00:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "DELETE Movie - success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44346/api/movies/5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"movies",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG1vdmllc1w1?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 12:59:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Rental(s)",
+			"item": [
+				{
+					"name": "POST New Rental",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\" : 4,\r\n    \"movieIds\" : [4]\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44346/api/newRentals",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44346",
+							"path": [
+								"api",
+								"newRentals"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST New Rental - success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"movieIds\": [4],\r\n    \"customerId\": 8\r\n}"
+								},
+								"url": {
+									"raw": "https://localhost:44346/api/newRentals",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44346",
+									"path": [
+										"api",
+										"newRentals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-AspNet-Version",
+									"value": "4.0.30319"
+								},
+								{
+									"key": "X-SourceFiles",
+									"value": "=?UTF-8?B?QzpcVXNlcnNcTmlraWNcQyMgcHJvamVjdHNcTW92aWVBcHBcTW92aWVBcHBcYXBpXG5ld1JlbnRhbHM=?="
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Feb 2021 18:54:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Admin@movieapp123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin@movieapp.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

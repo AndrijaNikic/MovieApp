@@ -1,0 +1,136 @@
+{
+  "id": "d9dfbde6-2a8c-4abc-a1d0-d87baaaeebda",
+  "version": "2.0",
+  "name": "MovieApp",
+  "url": "https://localhost:44346",
+  "tests": [{
+    "id": "531f3cbc-aae6-4829-8604-15ffff0354bd",
+    "name": "Edit Customer",
+    "commands": [{
+      "id": "1da06b35-b4f2-4446-ab20-7d544c986983",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "966a8732-0cb5-4a13-8afc-01731f68bd8e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1044x1123",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c4347bc-e4be-40ec-b00f-0628c76f9c63",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Customers",
+      "targets": [
+        ["linkText=Customers", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Customers')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Customers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0395b344-5233-4bb4-ad5c-e3712794c781",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Doug Dimmadome",
+      "targets": [
+        ["linkText=Doug Dimmadome", "linkText"],
+        ["css=.even:nth-child(2) a", "css:finder"],
+        ["xpath=//a[contains(text(),'Doug Dimmadome')]", "xpath:link"],
+        ["xpath=//table[@id='customers']/tbody/tr[2]/td/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/customers/edit/9')]", "xpath:href"],
+        ["xpath=//tr[2]/td/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Doug Dimmadome')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "349043ff-87f5-48b6-a5d7-44a4c332deab",
+      "comment": "",
+      "command": "click",
+      "target": "id=Customer_MembershipTypeId",
+      "targets": [
+        ["id=Customer_MembershipTypeId", "id"],
+        ["name=Customer.MembershipTypeId", "name"],
+        ["css=#Customer_MembershipTypeId", "css:finder"],
+        ["xpath=//select[@id='Customer_MembershipTypeId']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'Select Membership Type\nPay as You go\nMonthly\nQuarterly\nYearly')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93a0a7c9-8e11-477f-9496-8025ffc03904",
+      "comment": "",
+      "command": "select",
+      "target": "id=Customer_MembershipTypeId",
+      "targets": [],
+      "value": "label=Yearly"
+    }, {
+      "id": "4fccee97-dc27-4533-a3e9-ba690bd3cf39",
+      "comment": "",
+      "command": "click",
+      "target": "id=Customer_MembershipTypeId",
+      "targets": [
+        ["id=Customer_MembershipTypeId", "id"],
+        ["name=Customer.MembershipTypeId", "name"],
+        ["css=#Customer_MembershipTypeId", "css:finder"],
+        ["xpath=//select[@id='Customer_MembershipTypeId']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'Select Membership Type\nPay as You go\nMonthly\nQuarterly\nYearly')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "436375cd-92ea-4290-a12d-79947fa0661b",
+      "comment": "",
+      "command": "click",
+      "target": "id=Customer_Birthdate",
+      "targets": [
+        ["id=Customer_Birthdate", "id"],
+        ["name=Customer.Birthdate", "name"],
+        ["css=#Customer_Birthdate", "css:finder"],
+        ["xpath=//input[@id='Customer_Birthdate']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bad01d1-edc1-459d-b105-802af678f4ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=Customer_Birthdate",
+      "targets": [
+        ["id=Customer_Birthdate", "id"],
+        ["name=Customer.Birthdate", "name"],
+        ["css=#Customer_Birthdate", "css:finder"],
+        ["xpath=//input[@id='Customer_Birthdate']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "5 Jan 1967"
+    }, {
+      "id": "f286fe07-df82-4d74-bede-9c70ccc097da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "79c3c5a0-b3ee-4a2c-90c0-1f2de562715c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://localhost:44346/"],
+  "plugins": []
+}
